@@ -1,5 +1,5 @@
 [template]
-include = ["Cargo.toml", "src/lib.rs"]
+include = ["Cargo.toml", "src/lib.rs", "src/main.rs"]
 ignore = ["LICENSE", "README.md"]
 
 [placeholders]
