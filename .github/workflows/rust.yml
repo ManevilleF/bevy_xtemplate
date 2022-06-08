@@ -1,0 +1,59 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: cargo build --verbose
+
+  build_features:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: all features
+        run: cargo build --verbose --all-features
+      - name: no default features
+        run: cargo build --verbose --no-default-features
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: tests
+        run: cargo test --tests
+      - name: doc tests
+        run: cargo test --all-features --doc
+
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check Formatting
+        run: cargo fmt --all -- --check
+
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cargo clippy installation
+        run: rustup component add clippy
+      - name: Cargo clippy check
+        run: cargo clippy --all-features --all --tests -- -D warnings
+
+  rustdoc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: rustdoc
+        run: cargo rustdoc --all-features -- -D warnings

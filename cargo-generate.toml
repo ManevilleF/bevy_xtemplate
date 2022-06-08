@@ -21,3 +21,6 @@ ignore = [ "assets/res" ]
 [conditional.'!wasm_enabled']
 ignore = [ "index.html", "build_wasm.sh" ]
 
+[conditional.'!ci_enabled']
+ignore = [".github"]
+

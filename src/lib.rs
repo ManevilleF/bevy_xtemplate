@@ -1,3 +1,17 @@
+#![forbid(unsafe_code)]
+#![warn(
+    missing_docs,
+    clippy::all,
+    clippy::nursery,
+    clippy::pedantic,
+    nonstandard_style,
+    rustdoc::broken_intra_doc_links
+)]
+#![allow(
+    clippy::default_trait_access,
+    clippy::module_name_repetitions,
+    clippy::redundant_pub_crate
+)]
 use bevy::prelude::*;
 
 #[bevy_main]
