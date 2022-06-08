@@ -1,6 +1,6 @@
 [template]
-include = ["Cargo.toml", "src/lib.rs", "index.html", "build_wasm.sh", "apple/Makefile", "apple/crate_name.xcodeproj/project.pbxproj"]
-ignore = ["LICENSE", "README.md"]
+include = ["Cargo.toml", "src/lib.rs"]
+ignore = ["LICENSE", "README.md", "post_script.rhai"]
 
 [placeholders]
 ci_enabled = { type = "bool", prompt = "Enable Github CI?", default = true }
@@ -16,20 +16,23 @@ wasm_context_disabled = { type = "bool", prompt = "[WASM] Prevent context menu f
 [conditional.'ios_enabled'.placeholders]
 ios_company_name = { type = "string", prompt = "[iOS] What is your company name? (used for the bundle)" }
 
-[conditional.'!ios_enabled']
-ignore = ["apple", "assets/res"]
-
-# [conditional.'ios_enabled']
-# include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
-
 [conditional.'!android_enabled']
 ignore = ["assets/res"]
 
 [conditional.'!wasm_enabled']
 ignore = ["index.html", "build_wasm.sh"]
 
-# [conditional.'wasm_enabled']
-# include = ["index.html", "build_wasm.sh"]
+[conditional.'wasm_enabled']
+include = ["index.html", "build_wasm.sh"]
 
 [conditional.'!ci_enabled']
 ignore = [".github"]
+
+[conditional.'!ios_enabled']
+ignore = ["apple", "assets/res"]
+
+[conditional.'ios_enabled']
+include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
+
+[conditional.'ios_enabled'.hooks]
+post = ["post_script.rhai"]
