@@ -34,5 +34,5 @@ ignore = ["apple", "assets/res"]
 [conditional.'ios_enabled']
 include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
 
-[conditional.'ios_enabled'.hooks]
+[hooks]
 post = ["post_script.rhai"]
