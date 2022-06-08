@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Qoncealed</title>
+</head>
+<body style="margin: 0 !important; padding: 0 !important;">
+<script type="module">
+    import init from './{{crate_name}}.js'
+
+    init()
+
+    document.addEventListener('contextmenu', function (evt) {
+        evt.preventDefault();
+    })
+</script>
+</body>
+</html>

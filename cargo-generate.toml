@@ -1,0 +1,19 @@
+[template]
+exclude = ["LICENSE", "README.md"]
+
+[placeholders]
+android_enabled = { type = "bool", prompt = "Enable android target?", default = true }
+ios_enabled = { type = "bool", prompt = "Enable iOS target?", default = true }
+wasm_enabled = { type = "bool", prompt = "Enable WASM target?", default = true }
+ci_enabled = { type = "bool", prompt = "Enable Github CI?", default = true }
+optimizations_enabled = { type = "bool", prompt = "Enable debug optimizations?", default = true }
+
+[conditional.'wasm_enabled'.placeholders]
+wasm_resize_enabled = { type = "bool", prompt = "Enable automatic window resize in browser?", default = true }
+
+[conditional.'!ios_enabled']
+ignore = [ "apple" ]
+
+[conditional.'!wasm_enabled']
+ignore = [ "index.html", "build_wasm.sh" ]
+
