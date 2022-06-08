@@ -1,6 +1,6 @@
 [template]
 include = ["Cargo.toml", "src/lib.rs"]
-ignore = ["LICENSE", "README.md", "post_script.rhai"]
+ignore = ["LICENSE", "README.md"]
 
 [placeholders]
 ci_enabled = { type = "bool", prompt = "Enable Github CI?", default = true }
