@@ -14,7 +14,7 @@ wasm_resize_enabled = { type = "bool", prompt = "[WASM] Enable automatic window 
 wasm_context_disabled = { type = "bool", prompt = "[WASM] Prevent context menu from showing on browser?", default = true }
 
 [conditional.'ios_enabled'.placeholders]
-ios_company_name = { type = "String", prompt = "[iOS] What is your company name? (used for the bundle)" }
+ios_company_name = { type = "string", prompt = "[iOS] What is your company name? (used for the bundle)" }
 
 [conditional.'!ios_enabled']
 ignore = ["apple", "assets/res"]
