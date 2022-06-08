@@ -9,9 +9,11 @@
 
     init()
 
+    {% if wasm_context_disabled %}
     document.addEventListener('contextmenu', function (evt) {
         evt.preventDefault();
     })
+    {% endif %}
 </script>
 </body>
 </html>

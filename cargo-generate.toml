@@ -10,6 +10,7 @@ optimizations_enabled = { type = "bool", prompt = "Enable debug optimizations?",
 
 [conditional.'wasm_enabled'.placeholders]
 wasm_resize_enabled = { type = "bool", prompt = "Enable automatic window resize in browser?", default = true }
+wasm_context_disabled = { type = "bool", prompt = "Prevent context menu from showing on browser?", default = true }
 
 [conditional.'!ios_enabled']
 ignore = [ "apple" ]
