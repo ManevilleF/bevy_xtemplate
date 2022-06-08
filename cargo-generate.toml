@@ -1,5 +1,5 @@
 [template]
-include = ["Cargo.toml", "src/lib.rs", "index.html", "build_wasm.sh", "apple/Makefile", "apple/{{crate_name}}.xcodeproj/project.pbxproj"]
+include = ["Cargo.toml", "src/lib.rs", "index.html", "build_wasm.sh", "apple/Makefile", "apple/crate_name.xcodeproj/project.pbxproj"]
 ignore = ["LICENSE", "README.md"]
 
 [placeholders]
