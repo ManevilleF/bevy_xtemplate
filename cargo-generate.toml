@@ -1,5 +1,5 @@
 [template]
-exclude = ["LICENSE", "README.md"]
+ignore = ["LICENSE", "README.md"]
 
 [placeholders]
 android_enabled = { type = "bool", prompt = "Enable android target?", default = true }
@@ -13,7 +13,10 @@ wasm_resize_enabled = { type = "bool", prompt = "Enable automatic window resize 
 wasm_context_disabled = { type = "bool", prompt = "Prevent context menu from showing on browser?", default = true }
 
 [conditional.'!ios_enabled']
-ignore = [ "apple" ]
+ignore = [ "apple", "assets/res" ]
+
+[conditional.'!android_enabled']
+ignore = [ "assets/res" ]
 
 [conditional.'!wasm_enabled']
 ignore = [ "index.html", "build_wasm.sh" ]
