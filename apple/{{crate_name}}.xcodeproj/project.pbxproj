@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F401646327D10EF700610DC9 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
-		F406002F27D0FD1F00B3528B /* {{crate-name}}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = {{crate-name}}.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F406002F27D0FD1F00B3528B /* {{crate_name}}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = {{crate_name}}.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F401646627D10F3F00610DC9 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../assets; sourceTree = "<group>"; };
 		F401646927D11D2A00610DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F401645927D10D4800610DC9 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -55,7 +55,7 @@
 		F406003027D0FD1F00B3528B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F406002F27D0FD1F00B3528B /* {{crate-name}}.app */,
+				F406002F27D0FD1F00B3528B /* {{crate_name}}.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,9 +111,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		F406002E27D0FD1F00B3528B /* {{crate-name}} */ = {
+		F406002E27D0FD1F00B3528B /* {{crate_name}} */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F406003D27D0FD2100B3528B /* Build configuration list for PBXNativeTarget "{{crate-name}}" */;
+			buildConfigurationList = F406003D27D0FD2100B3528B /* Build configuration list for PBXNativeTarget "{{crate_name}}" */;
 			buildPhases = (
 				F406002B27D0FD1F00B3528B /* Sources */,
 				F406002C27D0FD1F00B3528B /* Frameworks */,
@@ -124,9 +124,9 @@
 			dependencies = (
 				F406004B27D1011B00B3528B /* PBXTargetDependency */,
 			);
-			name = {{crate-name}};
-			productName = {{crate-name}};
-			productReference = F406002F27D0FD1F00B3528B /* {{crate-name}}.app */;
+			name = {{crate_name}};
+			productName = {{crate_name}};
+			productReference = F406002F27D0FD1F00B3528B /* {{crate_name}}.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 			attributes = {
 				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = F406002A27D0FD1F00B3528B /* Build configuration list for PBXProject "{{crate-name}}" */;
+			buildConfigurationList = F406002A27D0FD1F00B3528B /* Build configuration list for PBXProject "{{crate_name}}" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F406002E27D0FD1F00B3528B /* {{crate-name}} */,
+				F406002E27D0FD1F00B3528B /* {{crate_name}} */,
 				F406004627D100FF00B3528B /* cargo_ios */,
 			);
 		};
@@ -335,10 +335,10 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-l{{crate-name}}",
+					"-l{{crate_name}}",
 					"-lc++abi",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate-name}};
+				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate_name}};
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,10 +378,10 @@
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-l{{crate-name}}",
+					"-l{{crate_name}}",
 					"-lc++abi",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate-name}};
+				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate_name}};
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,7 +416,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F406002A27D0FD1F00B3528B /* Build configuration list for PBXProject "{{crate-name}}" */ = {
+		F406002A27D0FD1F00B3528B /* Build configuration list for PBXProject "{{crate_name}}" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F406003B27D0FD2100B3528B /* Debug */,
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F406003D27D0FD2100B3528B /* Build configuration list for PBXNativeTarget "{{crate-name}}" */ = {
+		F406003D27D0FD2100B3528B /* Build configuration list for PBXNativeTarget "{{crate_name}}" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F406003E27D0FD2100B3528B /* Debug */,

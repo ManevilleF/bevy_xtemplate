@@ -6,19 +6,19 @@ ifndef DEVICE_ID
 endif
 
 run: install
-	xcrun simctl launch --console $(DEVICE) com.{{{username}}.{{crate-name}}
+	xcrun simctl launch --console $(DEVICE) com.{{{username}}.{{crate_name}}
 
 boot-sim:
 	xcrun simctl boot $(DEVICE) || true
 
 install: xcodebuild-simulator boot-sim
-	xcrun simctl install $(DEVICE) build/Debug-iphonesimulator/{{crate-name}}.app
+	xcrun simctl install $(DEVICE) build/Debug-iphonesimulator/{{crate_name}}.app
 
 xcodebuild-simulator:
-	IOS_TARGETS=x86_64-apple-ios xcodebuild -scheme {{crate-name}} -configuration Debug -derivedDataPath build -destination "id=$(DEVICE)"
+	IOS_TARGETS=x86_64-apple-ios xcodebuild -scheme {{crate_name}} -configuration Debug -derivedDataPath build -destination "id=$(DEVICE)"
 
 xcodebuild-iphone:
-	IOS_TARGETS=aarch64-apple-ios xcodebuild -scheme {{crate-name}} -configuration Debug -derivedDataPath build -arch arm64
+	IOS_TARGETS=aarch64-apple-ios xcodebuild -scheme {{crate_name}} -configuration Debug -derivedDataPath build -arch arm64
 
 clean:
 	rm -r build

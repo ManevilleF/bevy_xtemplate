@@ -1,8 +1,8 @@
 [package]
-name = "{{crate_name}}"
+name = {{crate_name}}
 version = "0.1.0"
 edition = "2021"
-authors = ["{{authors}}"]
+authors = {{authors}}
 
 [lib]
 crate-type = ["lib", "cdylib", "staticlib"]
