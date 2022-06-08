@@ -1,6 +1,5 @@
 #![forbid(unsafe_code)]
 #![warn(
-    missing_docs,
     clippy::all,
     clippy::nursery,
     clippy::pedantic,
