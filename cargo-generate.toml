@@ -1,6 +1,6 @@
 [template]
+include = ["Cargo.toml", "src", "index.html", "build_wasm.sh", "apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
 ignore = ["LICENSE", "README.md"]
-include = ["Cargo.toml", "src"]
 
 [placeholders]
 ci_enabled = { type = "bool", prompt = "Enable Github CI?", default = true }
@@ -14,10 +14,10 @@ wasm_resize_enabled = { type = "bool", prompt = "Enable automatic window resize 
 wasm_context_disabled = { type = "bool", prompt = "Prevent context menu from showing on browser?", default = true }
 
 [conditional.'!ios_enabled']
-ignore = [ "apple", "assets/res" ]
+ignore = ["apple", "assets/res"]
 
-[conditional.'ios_enabled']
-include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
+# [conditional.'ios_enabled']
+# include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
 
 [conditional.'!android_enabled']
 ignore = [ "assets/res" ]
@@ -25,8 +25,8 @@ ignore = [ "assets/res" ]
 [conditional.'!wasm_enabled']
 ignore = [ "index.html", "build_wasm.sh" ]
 
-[conditional.'wasm_enabled']
-include = ["index.html", "build_wasm.sh"]
+# [conditional.'wasm_enabled']
+# include = ["index.html", "build_wasm.sh"]
 
 [conditional.'!ci_enabled']
 ignore = [".github"]
