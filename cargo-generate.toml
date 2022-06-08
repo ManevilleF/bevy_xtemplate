@@ -1,5 +1,5 @@
 [template]
-include = ["Cargo.toml", "src/lib.rs", "index.html", "build_wasm.sh", "apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
+include = ["Cargo.toml", "src/lib.rs", "index.html", "build_wasm.sh", "apple/Makefile", "apple/{{crate_name}}.xcodeproj/project.pbxproj"]
 ignore = ["LICENSE", "README.md"]
 
 [placeholders]
@@ -10,8 +10,11 @@ ios_enabled = { type = "bool", prompt = "Enable iOS target?", default = true }
 wasm_enabled = { type = "bool", prompt = "Enable WASM target?", default = true }
 
 [conditional.'wasm_enabled'.placeholders]
-wasm_resize_enabled = { type = "bool", prompt = "Enable automatic window resize in browser?", default = true }
-wasm_context_disabled = { type = "bool", prompt = "Prevent context menu from showing on browser?", default = true }
+wasm_resize_enabled = { type = "bool", prompt = "[WASM] Enable automatic window resize in browser?", default = true }
+wasm_context_disabled = { type = "bool", prompt = "[WASM] Prevent context menu from showing on browser?", default = true }
+
+[conditional.'ios_enabled'.placeholders]
+ios_company_name = { type = "String", prompt = "[iOS] What is your company name? (used for the bundle)" }
 
 [conditional.'!ios_enabled']
 ignore = ["apple", "assets/res"]
@@ -20,10 +23,10 @@ ignore = ["apple", "assets/res"]
 # include = ["apple/Makefile", "apple/qoncealed.xcodeproj/project.pbxproj"]
 
 [conditional.'!android_enabled']
-ignore = [ "assets/res" ]
+ignore = ["assets/res"]
 
 [conditional.'!wasm_enabled']
-ignore = [ "index.html", "build_wasm.sh" ]
+ignore = ["index.html", "build_wasm.sh"]
 
 # [conditional.'wasm_enabled']
 # include = ["index.html", "build_wasm.sh"]

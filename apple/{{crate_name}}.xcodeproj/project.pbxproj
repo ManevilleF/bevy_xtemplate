@@ -338,7 +338,7 @@
 					"-l{{crate_name}}",
 					"-lc++abi",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate_name}};
+				PRODUCT_BUNDLE_IDENTIFIER = com.{{ios_company_name}}.{{crate_name}};
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,7 +381,7 @@
 					"-l{{crate_name}}",
 					"-lc++abi",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.{{username}}.{{crate_name}};
+				PRODUCT_BUNDLE_IDENTIFIER = com.{{ios_company_name}}.{{crate_name}};
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +394,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.{{username}}.cargo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.{{ios_company_name}}.cargo-ios";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.{{username}}.cargo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.{{ios_company_name}}.cargo-ios";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
