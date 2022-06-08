@@ -21,11 +21,11 @@ pub fn main() {
         title: "{{project-name}}".to_string(),
         ..Default::default()
     });
+    app.add_plugins(DefaultPlugins);
     {% if wasm_resize_enabled %}
     #[cfg(target_arch = "wasm32")]
         app.add_system(handle_browser_resize);
     {% endif %}
-
     app.run();
 }
 

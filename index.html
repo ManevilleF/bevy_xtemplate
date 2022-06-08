@@ -8,7 +8,6 @@
     import init from './{{crate_name}}.js'
 
     init()
-
     {% if wasm_context_disabled %}
     document.addEventListener('contextmenu', function (evt) {
         evt.preventDefault();
