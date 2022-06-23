@@ -8,6 +8,7 @@ optimizations_enabled = { type = "bool", prompt = "Enable debug optimizations?",
 android_enabled = { type = "bool", prompt = "Enable android target?", default = true }
 ios_enabled = { type = "bool", prompt = "Enable iOS target?", default = true }
 wasm_enabled = { type = "bool", prompt = "Enable WASM target?", default = true }
+audio_enabled = { type = "bool", prompt = "Enable Audio?", default = true }
 
 [conditional.'wasm_enabled'.placeholders]
 wasm_resize_enabled = { type = "bool", prompt = "[WASM] Enable automatic window resize in browser?", default = true }

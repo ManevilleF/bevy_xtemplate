@@ -6,7 +6,7 @@ ifndef DEVICE_ID
 endif
 
 run: install
-	xcrun simctl launch --console $(DEVICE) com.{{ios_company_name}}.{{crate_name}}
+	xcrun simctl launch --console $(DEVICE) com.{{ios_company_name}}.{{project_name}}
 
 boot-sim:
 	xcrun simctl boot $(DEVICE) || true
