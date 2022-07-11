@@ -12,7 +12,7 @@ crate-type = ["lib", "cdylib", "staticlib"]
 [dependencies.bevy]
 version = "0.7"
 default-features = false
-{% if audio_enabled}
+{% if audio_enabled %}
 features = ["render", "bevy_winit", "png", "vorbis", "bevy_audio"]
 {% else %}
 features = ["render", "bevy_winit", "png"]
